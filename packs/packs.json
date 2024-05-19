@@ -7,6 +7,15 @@
         "mods/creategogglescurio-1.16.5-0.0.4.jar": "https://mediafilez.forgecdn.net/files/4996/22/creategogglescurio-1.16.5-0.0.4.jar",
         "mods/flywheel-1.16-0.2.5.jar": "https://mediafilez.forgecdn.net/files/3535/459/flywheel-1.16-0.2.5.jar"
       }
+    },
+    "2": {
+      "additions": {
+        "mods/kubejs-create-1605.1.4-build.12.jar": "https://mediafilez.forgecdn.net/files/3584/608/kubejs-create-1605.1.4-build.12.jar",
+        "mods/kubejs-forge-1605.3.19-build.299.jar": "https://mediafilez.forgecdn.net/files/3647/98/kubejs-forge-1605.3.19-build.299.jar",
+        "mods/architectury-1.32.68.jar": "https://mediafilez.forgecdn.net/files/4521/290/architectury-1.32.68.jar",
+        "mods/rhino-forge-1605.1.5-build.75.jar": "https://mediafilez.forgecdn.net/files/3525/704/rhino-forge-1605.1.5-build.75.jar",
+        "kubejs/server_scripts/script.js": "https://minerofmillions.github.io/packs/pixelmon/server_script.js"
+      }
     }
   }
 }
