@@ -16,6 +16,12 @@
         "mods/rhino-forge-1605.1.5-build.75.jar": "https://mediafilez.forgecdn.net/files/3525/704/rhino-forge-1605.1.5-build.75.jar",
         "kubejs/server_scripts/script.js": "https://minerofmillions.github.io/packs/pixelmon/server_script.js"
       }
+    },
+    "3": {
+      "additions": {
+        "mods/comforts-forge-1.16.5-4.0.1.5.jar": "https://mediafilez.forgecdn.net/files/3681/503/comforts-forge-1.16.5-4.0.1.5.jar",
+        "mods/EasierSleeping-1.16.5-2.0.0.jar": "https://mediafilez.forgecdn.net/files/3302/60/EasierSleeping-1.16.5-2.0.0.jar"
+      }
     }
   }
 }
