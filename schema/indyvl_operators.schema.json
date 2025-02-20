@@ -16,18 +16,43 @@
         "description": "The internal name of the operator"
       },
       "returnType": {
-        "type": "string",
-        "description": "The return type of the operator"
+        "description": "The return type of the operator",
+        "$ref": "#/definitions/dataType"
       },
       "parameterTypes": {
         "type": "array",
         "description": "The parameter types of the operator",
         "items": {
-          "type": "string"
+          "$ref": "#/definitions/dataType"
         }
       }
     }
   },
   "minItems": 1,
-  "uniqueItems": true
+  "uniqueItems": true,
+  "definitions": {
+    "dataType": {
+      "enum": [
+        "boolean",
+        "integer",
+        "double",
+        "long",
+        "string",
+        "list",
+        "operator",
+        "nbt",
+        "block",
+        "item",
+        "entity",
+        "fluid",
+        "ingredients",
+        "recipe",
+        "any",
+        "number",
+        "named",
+        "uniquelyNamed",
+        "nullable"
+      ]
+    }
+  }
 }

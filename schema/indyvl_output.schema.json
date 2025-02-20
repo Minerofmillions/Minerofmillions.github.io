@@ -12,11 +12,103 @@
         "description": "A unique id for the variable card"
       },
       "type": {
-        "enum": ["constant", "operator"],
-        "description": "The type of the input"
+        "enum": ["constant", "operator", "aspect"],
+        "description": "The type of the input",
+        "default": "constant"
       }
-    }
+    },
+    "allOf": [
+      {
+        "if": {
+          "properties": {
+            "type": { "const": "constant" }
+          }
+        },
+        "then": {
+          "properties": {
+            "value": {
+              "type": "string",
+              "description": "The value of the constant"
+            },
+            "valueType": {
+              "$ref": "#/definitions/dataType"
+            }
+          },
+          "required": ["value", "valueType"]
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "type": { "const": "operator" }
+          },
+          "required": ["type"]
+        },
+        "then": {
+          "properties": {
+            "operatorId": {
+              "type": "string",
+              "description": "The id of the operator"
+            },
+            "inputs": {
+              "type": "array",
+              "description": "The inputs to the operator",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": ["operatorId", "inputs"]
+        }
+      },
+      {
+        "if": {
+          "properties": {
+            "type": { "const": "aspect" }
+          },
+          "required": ["type"]
+        },
+        "then": {
+          "properties": {
+            "aspectId": {
+              "type": "string",
+              "description": "The id of the aspect"
+            },
+            "partId": {
+              "type": "integer",
+              "description": "The part id of the aspect"
+            }
+          },
+          "required": ["aspectId", "partId"]
+        }
+      }
+    ]
   },
   "minItems": 1,
-  "uniqueItems": true
+  "uniqueItems": true,
+  "definitions": {
+    "dataType": {
+      "enum": [
+        "boolean",
+        "integer",
+        "double",
+        "long",
+        "string",
+        "list",
+        "operator",
+        "nbt",
+        "block",
+        "item",
+        "entity",
+        "fluid",
+        "ingredients",
+        "recipe",
+        "any",
+        "number",
+        "named",
+        "uniquelyNamed",
+        "nullable"
+      ]
+    }
+  }
 }
