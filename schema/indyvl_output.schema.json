@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://minerofmillions.github.io/schema/indyvl_operators.schema.json",
+  "title": "InDy Visual Language Output List",
+  "description": "The output schema for my [Minerofmillions'] Integrated Dynamics Visual Language",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "A unique id for the variable card"
+      },
+      "type": {
+        "enum": ["constant", "operator"],
+        "description": "The type of the input"
+      }
+    }
+  },
+  "minItems": 1,
+  "uniqueItems": true
+}
